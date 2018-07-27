@@ -2,6 +2,10 @@
   {{#each books}}
     <li> 
       {{ title }} - {{ @index }}
+      <a href="/books/{{_id}}/edit">Editar</a>
+      <form action="/books/{{_id}}/remove" method="post">
+        <input type="submit" value="delete">
+      </form>
     </li>
   {{/each}}
 </ul>
